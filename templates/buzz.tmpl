@@ -1,0 +1,11 @@
+<html>
+
+  <body>
+    <p>HUB url: {{feed.feed}}<p>
+    <h1>Buzzes</h1>
+    {% for entry in feed.entries %}
+      <h2>{{entry.title}}</h2>
+      <div>{{entry.summary}}</div>
+    {% endfor %}
+  </body>
+</html>

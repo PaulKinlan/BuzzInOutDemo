@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{title}}</title>
+  <link>{{link}}</link>
+  <link rel="me" type="text/html" src="http://www.google.com/profiles/{{profile}}" />
+  <entries>
+    {% for entry in entries %}
+    <entry>
+      <title>{{entry.title}}</title>
+      <link>{{entry.link}}</link>
+      <content><![CDATA[{{entry.content}}]]></content>
+      <published>{{entry.published}}</published>
+    </entry>
+    {% endfor %}
+  </entries>
+</atom>
